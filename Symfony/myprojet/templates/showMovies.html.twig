@@ -2,7 +2,7 @@
 {% block title %}Films{% endblock %}
 
 {% block body %}
-    <h1 class="py-5 text-center">Movies</h1>
+    <h1 class="py-5 text-center"><i class="fas fa-film" style="margin-right: 10px"></i>Movies<i class="fas fa-film"style="margin-left: 10px"></i></h1>
     <a class="btn btn-outline-success" style="margin-left: 20px;"  href="{{ path('formMovie') }}" role="button"><i class="fas fa-plus" style="margin-right: 10px"></i>Add movie</a>
     {% for movie in movies %}
         <div class="media" style="margin: 20px">
@@ -17,5 +17,4 @@
             </div>
         </div>
     {% endfor %}
-
 {% endblock %}
