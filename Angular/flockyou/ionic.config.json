@@ -1,5 +1,7 @@
 {
   "name": "flockyou",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
