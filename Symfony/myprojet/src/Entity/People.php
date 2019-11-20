@@ -143,4 +143,10 @@ class People
 
         return $this;
     }
+
+    public function __toString()
+    {
+        // TODO: Implement __toString() method.
+        return(string) $this->last_name;
+    }
 }

@@ -6,9 +6,17 @@
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             <a class="nav-item nav-link active" href="{{ path('home') }}">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-item nav-link" href="#">Name</a>
-            <a class="nav-item nav-link" href="#">Pricing</a>
-            <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <a class="nav-item nav-link" href="{{ path('movies') }}">Movies</a>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Categories
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    {% for category in categories %}
+                        <a class="dropdown-item" href="{{ path('category', {'id': category.id}) }}">{{ category.title }}</a>
+                    {% endfor %}
+                </div>
+            </li>
         </div>
     </div>
 </nav>

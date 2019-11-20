@@ -1,4 +1,11 @@
 {% extends 'base.html.twig' %}
 
 {% block title %} Flockyou {% endblock %}
-{% block body %}HOME - Mon lucky number : {{ lucky }}{% endblock %}
+{% block body %}
+    <h1 class="py-5 text-center">Nouveautés du moment!</h1>
+    <div class="row" style="margin-left: 8%">
+        {% for movie in lastMovies %}
+            {% include "_includes/card.html.twig" with {'movie': movie} %}
+        {% endfor %}
+    </div>
+{% endblock %}
