@@ -6,11 +6,6 @@
     <div class="row" style="margin-left: 8%">
         {% for movie in lastMovies %}
                 {% include "_includes/card.html.twig" with {'movie': movie} %}
-            {% for actor in movie.people %}
-                <ul>
-                    <li>{{ actor.lastName }}{{ actor.firstName }}</li>
-                </ul>
-            {% endfor %}
         {% endfor %}
     </div>
 {% endblock %}

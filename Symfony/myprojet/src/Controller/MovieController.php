@@ -20,7 +20,7 @@ class MovieController extends AbstractController
         $pagination = $paginator->paginate(
           $query,
           $request->query->getInt('page', 1),
-          5
+            5
         );
         $em = $this->getDoctrine();
         $repo = $em->getRepository(Movie::class)->findAll();
