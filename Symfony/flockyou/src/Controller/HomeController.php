@@ -7,6 +7,10 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class HomeController extends AbstractController
 {
+    public function navbar() {
+        return $this->render('header.html.twig');
+    }
+
     /**
      * @Route("/home", name="home")
      */
